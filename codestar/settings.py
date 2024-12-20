@@ -31,6 +31,8 @@ DEBUG = False
 
 ALLOWED_HOSTS = [
     '.herokuapp.com',
+    'amazingiotblog-87eedaaf5e40.herokuapp.com',  # Add your specific Heroku app domain
+    'localhost',
     '127.0.0.1',
 ]
 
