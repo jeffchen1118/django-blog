@@ -3,5 +3,5 @@ from django.views import generic
 from .models import Post, Comment
 # Create your views here.
 class PostList(generic.ListView):
-    queryset = Post.objects.all()
-    template = 'post_list.html'
+    queryset = Post.objects.filter(status=1) 
+    template_name = 'post_list.html'
