@@ -5,4 +5,4 @@ from .models import Post, Comment
 class PostList(generic.ListView):
     queryset = Post.objects.filter(status=1) 
     template_name = 'blog/index.html'
-    pagenate_by = 6
+    paginate_by = 6
