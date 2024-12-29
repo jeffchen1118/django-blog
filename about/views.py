@@ -4,7 +4,7 @@ from .models import About
 from .forms import CollaborateForm
 
 # Create your views here.
-def about_me(request):
+def about(request):
     """
     Display an individual :model:`about.About`.
 
@@ -23,7 +23,9 @@ def about_me(request):
     
     return render(
         request,
-        "about/about_me.html",
-        {"about": about},
-        {"collaborate_form": collaborate_form},
-        )
+        "about/about.html",
+        {
+            "about": about,
+            "collaborate_form": collaborate_form,
+        },
+    )

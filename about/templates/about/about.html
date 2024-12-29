@@ -31,17 +31,12 @@
 
             <!-- add your form here. Your submit button should 
                                 have the classes of btn, btn-secondary -->
-            {% if user.is_authenticated %}
-            <!-- <h3>Let's Collaborate!</h3> -->
-            <!-- <p>Posting as: {{ user.username }}</p> -->
             <form id="CollaborateForm" method="post" style="margin-top: 1.3em;">
                 {{ collaborate_form | crispy }}
                 {% csrf_token %}
-                <button id="submitButton" type="submit" class="btn btn-signup btn-lg">Submit</button>
+                <button id="submitButton" type="submit" class="btn btn-secondary">Submit</button>
             </form>
-            {% else %}
-            <p>Log in to leave a collaborate message</p>
-            {% endif %}
+
         </div>
     </div>
 </div>
