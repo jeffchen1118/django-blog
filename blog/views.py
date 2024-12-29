@@ -30,7 +30,10 @@ def post_detail(request, slug):
     comment_form = CommentForm()
     
     if request.method == "POST":
+        print("Received a POST request")
         comment_form = CommentForm(data=request.POST)
+        # print(request.POST)    
+        # print(comment_form)
     if comment_form.is_valid():
         comment = comment_form.save(commit=False)
         comment.author = request.user
@@ -40,7 +43,7 @@ def post_detail(request, slug):
         request, messages.SUCCESS,
         'Comment submitted and awaiting approval'
     )
-
+    print("About to render template")
     return render(
         request,
         "blog/post_detail.html",
