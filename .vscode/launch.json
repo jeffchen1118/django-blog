@@ -1,0 +1,23 @@
+// filepath: /home/chienc/aiCodeCourse/code/django-blog/django-blog/.vscode/launch.json
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Python: Django",
+            "type": "python",
+            "request": "launch",
+            "program": "${workspaceFolder}/manage.py",
+            "args": [
+                "runserver",
+                "--noreload"
+            ],
+            "django": true,
+            "justMyCode": true,
+            "cwd": "${workspaceFolder}",
+            "env": {
+                "DJANGO_SETTINGS_MODULE": "codestar.settings"
+            },
+            "console": "integratedTerminal"
+        }
+    ]
+}
