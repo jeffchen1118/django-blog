@@ -42,7 +42,7 @@ def post_detail(request, slug):
         messages.add_message(
         request, messages.SUCCESS,
         'Comment submitted and awaiting approval'
-    )
+        )
     print("About to render template")
     return render(
         request,
