@@ -12,15 +12,12 @@ class PostList(generic.ListView):
     
 def post_detail(request, slug):
     """
+    renders the most recent blog post and allows user comments.
     Display an individual :model:`blog.Post`.
-
     **Context**
-
     ``post``
         An instance of :model:`blog.Post`.
-
     **Template:**
-
     :template:`blog/post_detail.html`
     """
 
@@ -31,7 +28,6 @@ def post_detail(request, slug):
     comment_form = CommentForm()
     
     if request.method == "POST":
-        print("Received a POST request")
         comment_form = CommentForm(data=request.POST)
         # print(request.POST)    
         # print(comment_form)
@@ -44,7 +40,6 @@ def post_detail(request, slug):
         request, messages.SUCCESS,
         'Comment submitted and awaiting approval'
         )
-    print("About to render template")
     return render(
         request,
         "blog/post_detail.html",
