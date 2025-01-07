@@ -48,6 +48,7 @@ body {
 
 .profile_image {
     width: 75%;
+    height: auto;
 }
 
 .scale {
